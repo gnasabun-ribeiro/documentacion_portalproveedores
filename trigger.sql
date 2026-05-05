@@ -19,7 +19,7 @@ BEGIN
   IF v_operadora = 'Vista Energy' THEN
 
     -- Básica dentro de relacion de dependencia
-    IF NEW.tipo_dependencia = 'Relacion de dependencia' THEN
+    IF NEW.tipo_dependencia = 'Relación de dependencia' THEN
       INSERT INTO public.documentacion_persona (cuil_personal, nombre_documento, cargado, tipo_vencimiento) VALUES
         (NEW.cuil, 'DNI/CUIL', false, 'Con vencimiento'),
         (NEW.cuil, 'Alta temprana ARCA', false, 'Con vencimiento'),
@@ -65,7 +65,7 @@ BEGIN
   -- ============================================================
   ELSIF v_operadora = 'YPF' THEN
 
-    IF NEW.tipo_dependencia = 'Relacion de dependencia' THEN
+    IF NEW.tipo_dependencia = 'Relación de dependencia' THEN
 
       -- Básica dentro de relacion de dependencia
       INSERT INTO public.documentacion_persona (cuil_personal, nombre_documento, cargado, tipo_vencimiento) VALUES
